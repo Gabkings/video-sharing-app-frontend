@@ -16,8 +16,8 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
-
 import LogoImg from "../imgs/channels4_profile.jpg";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   flex: 1;
@@ -86,14 +86,18 @@ export const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-          <Img src={LogoImg}></Img>
-          KingsTube
-        </Logo>
-        <Item>
-          <HomeIcon />
-          Home
-        </Item>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Logo>
+            <Img src={LogoImg}></Img>
+            KingsTube
+          </Logo>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Item>
+            <HomeIcon />
+            Home
+          </Item>
+        </Link>
         <Item>
           <ExploreOutlinedIcon />
           Explore
@@ -112,15 +116,15 @@ export const Menu = ({ darkMode, setDarkMode }) => {
           History
         </Item>
         <Hr />
-        {/* <Login>
+        <Login>
           Sign in to like videos, comment, and subscribe.
-          <Link to="signin" style={{textDecoration:"none"}}>
+          <Link to="signin" style={{ textDecoration: "none" }}>
             <Button>
               <AccountCircleOutlinedIcon />
               SIGN IN
             </Button>
           </Link>
-        </Login> */}
+        </Login>
         <Hr />
         <Title>BEST OF LAMATUBE</Title>
         <Item>

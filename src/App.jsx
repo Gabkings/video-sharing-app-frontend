@@ -1,6 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { Cards } from "./components/Cards";
 import { Menu } from "./components/Menu";
 import { Navbar } from "./components/Navbar";
 import { darkTheme, lightTheme } from "./utils/Theme";
